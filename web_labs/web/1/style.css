@@ -1,0 +1,40 @@
+body{
+    background: url(img/bg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font: 16px/1.3 Verdana;
+    text-align: center;
+    color: #111;
+}
+
+#title{
+    color: aquamarine;
+    font-size: 25px;
+}
+
+.box h3{
+    text-align: center;
+}
+
+.box{
+    position: relative;
+    margin: auto;
+    width: 400px;
+    border: 5px ridge white;
+    background: gray;
+    text-align: left;
+}
+#first{
+    font: 11px Verdana;
+}
+#first:hover{
+    transform: rotate(20deg);
+    color: green;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+#fifth:active{
+    visibility: hidden;
+}

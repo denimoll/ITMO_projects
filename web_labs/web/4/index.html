@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">               
+        <title>Web-технологии</title>    
+    </head>
+<body>
+<h1>PART 1</h1>
+    
+    <h2>Task 1</h2>
+    <script>
+        let text = "Oh, I am sorry. Sorry for what? My dad told me not to be a shame our ...";
+        document.write(text);
+        document.write("<br/>");
+        document.write("Количество символа: ");
+        document.write(text.length);
+    </script>
+    
+    <h2>Task 2</h2>
+    <script>
+        document.write(document.location.href);
+    </script>
+    
+    <h2>Task 3</h2>
+    <script>
+        let b = document.location.pathname;
+        let a = document.location.protocol;
+        document.write(a);
+        document.write("<br/>");
+        document.write(b);
+    </script>
+    
+    
+    
+    
+<h1>PART 2</h1>
+    
+    <h2>Task 1</h2>
+    <a name="blocks">Блочная верстка</a>
+    <br>
+    <a name="js">Java Script</a>
+    <br>
+    
+    <h2>Task 2</h2>
+    <a href="vk.com">VK</a>
+    <br>
+    <a href="ok.ru">OK</a>
+    <br>
+    <a href="facebook.com">FB</a>
+    <br>
+    
+    <h2>Task 3</h2>
+    <img id="pic1" src="img/1.jpg" >
+    <img id="pic2" src="img/2.jpg" >
+    <img id="pic3" src="img/3.jpeg" >
+    
+    <h2>Task 4</h2>
+    <p>Количество анкоров:
+        <script>
+            document.write(document.anchors.length);
+        </script>
+    </p>
+    
+    <h2>Task 5</h2>
+    <p>Количество ссылок:
+        <script>
+            document.write(document.links.length);
+        </script>
+    </p>
+    
+    <h2>Task 6</h2>
+    <p>innerHTML первого анкора:
+        <script>
+            document.write(document.anchors[0].innerHTML);
+        </script>
+    </p>
+    
+    <h2>Task 7</h2>
+    <p>Количество изображений:
+        <script>
+            document.write(document.images.length);
+        </script>
+    </p>
+    
+    <h2>Task 8</h2>
+    <p>Значение ширины первой картинки:
+        <script>
+            var x=document.getElementById("pic1"); document.write(document.getElementById("pic1").width);
+        </script>
+    </p>
+    
+    <h2>Task 9</h2>
+    <p>Значение ширины самой широкой картинки:
+        <script>
+            var arr=[];
+            arr.push(document.getElementById("pic1").width);
+            arr.push(document.getElementById("pic2").width);
+            arr.push(document.getElementById("pic3").width);
+            function arrayWidthMax(array){
+                var max=arr[0];
+                for (var i=0; i< array.length; i++){
+                    if (arr[i+1]>max) {
+                        max=arr[i+1];
+                        }     
+                }
+                document.write (max);
+                }
+            arrayWidthMax(arr);
+        </script>
+    
+    </p>
+    
+    <h2>Task 10</h2>
+    <p>Значение сумм высот:
+        <script>
+            var arr = [];
+            arr.push(document.getElementById("pic1").height);
+            arr.push(document.getElementById("pic2").height);
+            arr.push(document.getElementById("pic3").height);
+            function arraySum(array){
+                var sum = 0;
+                for(var i = 0; i < array.length; i++){
+                    sum += array[i];
+                    }
+                document.write(sum);
+                }
+            arraySum(arr);
+        </script>
+    </p>
+    <h1>PART 3</h1>
+    <script>
+let forms = [];
+for (let i = 0; i < 20; i++) {
+    let form = document.createElement('form');
+    form.name = `formName${i+1}`;
+    form.id = `formID${i+1}`;
+    forms.push(form);
+    document.body.append(form);
+}
+let evenFormsNames = forms.filter((form) => form.id.substring(6, form.id.length) % 2 == 0)
+    .map((evenForm) => evenForm.id).join(', ');
+document.write(evenFormsNames);
+let formsHTML = document.body.getElementsByTagName('form');
+for (let i = 0; i < formsHTML.length ; i++) {
+    let inputText = document.createElement('input');
+    let inputPass = document.createElement('input');
+    let inputRadio = document.createElement('input');
+    inputText.type = "text";
+    inputText.style.margin = "5px";
+    inputPass.type = "password";
+    inputPass.style.margin = "5px";
+    inputRadio.type = "radio";
+    inputRadio.style.margin = "5px";
+    formsHTML[i].appendChild(inputText);
+    formsHTML[i].appendChild(inputPass);
+    formsHTML[i].appendChild(inputRadio);
+}
+for (let i = 0; i < formsHTML.length ; i++) {
+    let button = document.createElement('button');
+    button.type = 'button';
+    button.innerText = "Показать имя формы";
+    button.style.margin = "5px";
+    button.onclick = () => alert(button.innerText);
+    formsHTML[i].appendChild(button);
+}
+for (let i = 0; i < formsHTML.length ; i++) {
+    let button = document.createElement('button');
+    button.type = 'button';
+    button.innerText = "Принадлежность";
+    button.style.margin = "5px";
+    button.onclick = () => alert(button.parentNode.id);
+    formsHTML[i].appendChild(button);
+}
+for (let i = 0; i < formsHTML.length ; i++) {
+    let button = document.createElement('button');
+    button.type = 'reset';
+    button.innerText = "Сбросить";
+    button.style.margin = "5px";
+    formsHTML[i].appendChild(button);
+}
+for (let i = 0; i < formsHTML.length ; i++) {
+    let button = document.createElement('button');
+    button.type = 'button';
+    button.innerText = "Показать количество полей";
+    button.style.margin = "5px";
+    button.onclick = () => {
+        alert(`Количество полей равно ${button.parentNode.childNodes.length}`);
+    };
+    formsHTML[i].appendChild(button);
+}
+document.body.querySelectorAll('button').forEach((button)=> {
+    button.style.padding = '5px';
+    button.style.width = '150px';
+    button.style.display = 'inline-block';
+    button.style.borderRadius = '10px';
+    button.style.border = '1px solid gray';
+    button.style.cursor = 'pointer';
+    button.onmouseover = () => {
+        button.style.backgroundColor = '#b895fb';
+        button.style.color = "white";
+    };
+    button.onmouseout = () => {
+        button.style.color = 'black';
+        button.style.backgroundColor = '#f0f0f0';
+    };
+    let image = document.createElement("img");
+    image.style.width = "20px";
+    image.style.height = "20px";
+    image.style.verticalAlign = "bottom";
+    switch (button.innerText) {
+        case "Показать имя формы":image.src = "img/1.jpg";
+            break;
+        case "Принадлежность":image.src = "img/3.jpeg";
+            break;
+        case "Сбросить":image.src = "img/2.jpg";
+            break;
+        case "Показать количество полей":image.src = "img/1.jpg";
+            break;
+    }
+    button.prepend(image);
+});
+    </script>
+</body>
+</html>

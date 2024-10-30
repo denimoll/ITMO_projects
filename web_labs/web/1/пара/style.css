@@ -1,0 +1,35 @@
+body{
+	width:500px;
+}
+.header{
+	color: red;
+}
+h1:hover{
+	transform: scale(1.25);
+}
+.main{
+	border:1px solid black;	
+}
+#box{
+	padding: 15px;
+	margin: 15px;
+	border: 1px solid red;
+	text-align:center;
+}
+.table{
+	margin: auto;
+}
+#first{
+	font: 11px Verdana;
+}
+#first:hover{
+	transform: rotate(2deg);
+	color: green;
+}
+a{
+	text-decoration: none;
+	color: brown;
+}
+#fifth:active{
+	visibility: hidden;
+}

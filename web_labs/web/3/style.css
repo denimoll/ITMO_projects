@@ -1,0 +1,116 @@
+body{
+	text-align: center;
+	min-width: 1050px;
+	margin: auto;
+}
+.header{
+	background: url(images/bg.jpg) no-repeat;
+	background-size: cover;
+	height: 900px;
+	position: relative;
+	top: -100px;
+}
+.header .container{
+	position: relative;	
+	top: 370px;
+}
+.header .container h1{
+	color: white;
+	font: 90px san-serif;
+	text-align: center;
+	font-weight: bold;
+	line-height: 0.4;
+}
+.header .container p{
+	color: white;
+	font: 20px san-serif;
+	text-align: center;
+	position: relative;
+	top: 25px;
+	letter-spacing: 10px;
+}
+.header .container a{
+	background: black;
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 30px;
+	top: 50px;
+	color: white;
+	font: 20px san-serif;
+	text-decoration: none;
+}
+.nav{
+    position: relative;
+	top: -116px;
+    background-color: black;
+    height: 70px;
+}
+.nav .container{
+    position: relative;
+    left: -150px;
+}
+.nav .container li{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 25px;
+}
+#active{
+    background-color: blue;
+}
+.main{
+    position: relative;
+    top: -70px;
+}
+.main .container{
+    text-align: justify;
+    position: relative;
+    left: 80px
+}
+.main .container img{
+    float: left;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.main .container p{
+    margin-right: 200px;
+}
+.jumbotron{
+    background: url(images/jumbotron_bg.jpg) no-repeat;
+	background-size: cover;
+	height: 550px;
+	position: relative;
+    top:50px;
+    color: white;
+    text-align: right;
+}
+.jumbotron .container{
+    position: relative;
+    top: 200px;
+    right:130px;
+}
+.jumbotron .container a{
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+	justify-content: center;
+	align-items: center;
+    width: 130px;
+	height: 30px;
+    background-color: blue;
+}
+.footer{
+    position: relative;
+	bottom: 0px;
+    background-color: black;
+    height: 70px;
+    color: white;
+}
+.footer .container p{
+    position: relative;
+    left: -280px;
+    top: 15px;
+}
